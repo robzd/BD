@@ -8,3 +8,12 @@ class Cliente(models.Model):
 
     def __str__(self):
         return f'{self.nome} - {self.email}'
+
+class Endereco(models.Model):
+    rua = models.CharField(max_length=100)
+    bairro = models.CharField(max_length=100)
+    cidade = models.CharField(max_length=100)
+    numero = models.CharField(max_length=5) 
+
+    def __str__(self):
+        return f'{self.rua} - {self.bairro} {self.cidade} - {self.numero}'
